@@ -1,22 +1,18 @@
 <template>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-    <van-button type="primary">主要按钮</van-button>
-    <van-button type="success">成功按钮</van-button>
-    <van-button type="default">默认按钮</van-button>
-    <van-button type="warning">警告按钮</van-button>
-    <van-button type="danger">危险按钮</van-button>
-
-
+  <van-grid :column-num="2">
+    <van-grid-item v-for="value in 4" :key="value" icon="photo-o" text="文字" />
+  </van-grid>
 </template>
 
 <script>
 // 原始代码
-import { Button } from 'vant';
+import { Button,Grid, GridItem } from 'vant';
 export default {
   name: 'App',
   components: {
-    [Button.name]:Button
+    [Button.name]:Button,
+    [Grid.name]:Grid,
+    [GridItem.name]:GridItem
   }
 }
 </script>
